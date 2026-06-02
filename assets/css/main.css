@@ -12,29 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #2e86ab ; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #444444;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #222222;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #2e86ab;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #444444; /* The default color of the main navmenu links */
-  --nav-hover-color: #2e86ab; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #2e86ab; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #444444;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #2e86ab;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #2e86ab;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -89,14 +101,15 @@ h6 {
 
 /* PHP Email Form Messages
 ------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+.php-email-form .error-message {display: none !important;
+  display: none !important; 
+  visibility: hidden !important; /* 隱藏元素 */
+  opacity: 0 !important;          /* 變成完全透明 */
+  height: 0 !important;           /* 高度歸零 */
+  padding: 0 !important;          /* 內邊距歸零（消滅紅色大區塊） */
+  margin: 0 !important;           /* 外邊距歸零 */
+  border: none !important;        /* 拔掉任何邊框 */
+  font-size: 0 !important;        /* 字體縮小到不見 */
 }
 
 .php-email-form .sent-message {
@@ -155,7 +168,7 @@ h6 {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(230,232,235, 0.85);
+  background-color: rgba(230, 232, 235, 0.85);
   backdrop-filter: blur(5px);
   z-index: 0;
   pointer-events: none;
@@ -1114,7 +1127,7 @@ section,
 }
 
 .services .service-item.item-teal i {
-  color: #20c997;
+  color: rgba(160, 82, 45, 0.4);
 }
 
 .services .service-item.item-teal:hover .icon i {
@@ -1122,7 +1135,7 @@ section,
 }
 
 .services .service-item.item-teal:hover .icon path {
-  fill: #20c997;
+  fill: rgba(160, 82, 45, 0.4);
 }
 
 .services .service-item.item-red i {
@@ -1426,8 +1439,364 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# Notes section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+.notes-card {
+  background: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  padding: 40px 30px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+  border-left: 4px solid var(--accent-color);
+}
+
+.notes-card:hover {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.notes-card .post-meta {
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 10px;
+}
+
+.notes-card .post-meta i {
+  margin-right: 4px;
+}
+
+.notes-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.notes-card h3 a {
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+
+.notes-card h3 a:hover {
+  color: var(--accent-color);
+}
+
+.notes-card p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.notes-card .read-more {
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.notes-card .read-more i {
+  margin-left: 4px;
+  transition: 0.3s;
+}
+
+.notes-card .read-more:hover i {
+  margin-left: 8px;
+}
+
+.post-tag {
+  display: inline-block;
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  color: var(--accent-color);
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Notes Post section
+--------------------------------------------------------------*/
+.post-header {
+  padding: 40px 0 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  margin-bottom: 40px;
+}
+
+.post-header .post-meta {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 15px;
+}
+
+.post-header .post-meta i {
+  margin-right: 5px;
+}
+
+.post-header .post-meta span {
+  margin-right: 20px;
+}
+
+.post-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.post-tag {
+  display: inline-block;
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  color: var(--accent-color);
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.post-content {
+  font-size: 17px;
+  line-height: 2;
+  color: var(--default-color);
+}
+
+.post-content h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 40px 0 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.post-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 30px 0 12px;
+}
+
+.post-content p {
+  margin-bottom: 20px;
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+.post-content li {
+  margin-bottom: 8px;
+}
+
+.post-content blockquote {
+  border-left: 4px solid var(--accent-color);
+  padding: 15px 20px;
+  margin: 25px 0;
+  background: color-mix(in srgb, var(--accent-color), transparent 93%);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+}
+
+.post-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.post-content code {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.post-content pre {
+  background: #1e1e1e;
+  color: #dcdcdc;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.post-content pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-color);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  gap: 12px;
+}
+
+.post-footer {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.post-nav a {
+  flex: 1;
+  padding: 15px 20px;
+  background: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  font-size: 14px;
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+
+.post-nav a:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+}
+
+.post-nav .prev-post {
+  text-align: left;
+}
+
+.post-nav .next-post {
+  text-align: right;
+}
+
+.post-nav .nav-label {
+  font-size: 12px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.sidebar-widget {
+  background: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+ 
+.sidebar-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-color);
+}
+ 
+.sidebar-title i {
+  color: var(--accent-color);
+  margin-right: 6px;
+}
+ 
+/* 分類標籤 */
+.sidebar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+ 
+.sidebar-tag {
+  display: inline-block;
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  color: var(--accent-color);
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+ 
+.sidebar-tag:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+ 
+/* 最新文章 */
+.sidebar-recent {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+.sidebar-recent li {
+  padding: 10px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+ 
+.sidebar-recent li:last-child {
+  border-bottom: none;
+}
+ 
+.sidebar-recent li a {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--heading-color);
+  text-decoration: none;
+  margin-bottom: 4px;
+  transition: 0.3s;
+}
+ 
+.sidebar-recent li a:hover {
+  color: var(--accent-color);
+}
+ 
+.sidebar-recent li span {
+  font-size: 12px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+ 
+/* 關於作者（備用） */
+.sidebar-author {
+  text-align: center;
+}
+ 
+.sidebar-author img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+ 
+.sidebar-author p {
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 12px;
+}
+ 
+.sidebar-author a {
+  color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* 頁面標題背景區塊 */
+.section.title-bg {
+  background-color: #f8f9fa; /* 將背景替換為較深的冷調灰 */
+  border-bottom: 1px solid #e2e8f0; /* 邊框線同步稍微加深 */
+  padding-top: 60px;    /* 控制標題上方的色塊高度 */
+  padding-bottom: 25px; /* 控制標題下方的色塊高度 */
 }
