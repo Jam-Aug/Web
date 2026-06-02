@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>聯絡我 - 詹姆隨筆札記</title>
+  <title>作品細節 - 詹姆隨筆札記</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -36,7 +36,7 @@
   ======================================================== -->
 </head>
 
-<body class="contact-page">
+<body class="portfolio-details-page">
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
@@ -75,7 +75,7 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
+      
       <div class="header-social-links">
         <a href="https://x.com/Jam445585889727" class="twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
         <!--<a href="#" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
@@ -88,90 +88,82 @@
 
   <main class="main">
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>聯絡我</h2>
-        <p>如果有任何想說的，歡迎留言給我</p>
+        <h2>閱讀筆記</h2>
+        <p>書籍摘要、重點整理</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
 
-          <div class="col-lg-5">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
 
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>地址</h3>
-                  <p>台中市南區</p>
-                </div>
-              </div><!-- End Info Item -->
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
 
-              <!--<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div> End Info Item 
+              <div class="swiper-wrapper align-items-center">
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div> End Info Item -->
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.372532484937!2d120.67275107534745!3d24.123551978417662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693cfcecffe9d9%3A0xe28afadc0dad203a!2z5ZyL56uL5Lit6IiI5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1779871349043!5m2!1szh-TW!2stw" frameborder="0" style="border:0; width: 100%; height: 450px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <form id="google-contact-form" class="php-email-form" action="https://script.google.com/macros/s/AKfycby_O_-66BgTafC1HUSkbVjLCdDx8iExd48L2yteaXLUYOB5M2V5R9SUycOEEnPJCJwl-w/exec" method="post" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">姓名</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/product-1.webp" alt="">
                 </div>
 
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">電子郵件</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                <!--<div class="swiper-slide">
+                  <img src="assets/img/portfolio/product-1.webp" alt="">
                 </div>
 
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">主旨</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/branding-1.webp" alt="">
                 </div>
 
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">訊息</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button> 
-                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/books-1.webp" alt="">
+                </div>-->
 
               </div>
-            </form>
-          </div><!-- End Contact Form -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>種類</strong>:閱讀筆記</li>
+                <li><strong>最近更新</strong>:2025年6月</li>
+                <li><strong>圖片原址</strong>: <a href="https://commons.wikimedia.org/wiki/File:Athen_Stoa_Ostrakismos_2.jpg?uselang=zh-tw">Public Domain by Wikimedia Commons</a></li>
+                <li><strong>本文連結</strong>: <a href="notes.html #reading" target="_blank">心得隨筆</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>論文摘要：流亡、陶片流放制及雅典民主</h2>
+              <p>本文的核心議題在於探討古風時代希臘城邦內部激烈的貴族政治衝突，如何透過流放行為的演變，形塑了雅典的民主政治。本文將從古風時代的社會背景出發，分析Mytilene與雅典的實例，並以此比較兩者流變及雅典的特殊性。</p>
+            </div>
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Contact Section -->
+    </section><!-- /Portfolio Details Section -->
 
   </main>
 
@@ -182,10 +174,10 @@
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Kelly</strong> <span>All Rights Reserved<br></span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://x.com/Jam445585889727" target="_blank"><i class="bi bi-twitter-x"></i></a>
-        <!--<a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
-        <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>-->
+        <a href="https://x.com/Jam445585889727" class="twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <!--<a href="#" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>-->
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -219,53 +211,5 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
-<script>
-  document.getElementById('google-contact-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // 阻止網頁跳轉
-    
-    var form = this;
-    var loading = form.querySelector('.loading');
-    var errorMessage = form.querySelector('.error-message');
-    var sentMessage = form.querySelector('.sent-message');
-    
-    // 顯示 Loading，隱藏其他提示
-    loading.style.display = 'block';
-    errorMessage.style.display = 'none';
-    sentMessage.style.display = 'none';
-    
-    // 封裝表單資料
-    var formData = new FormData(form);
-    var searchParams = new URLSearchParams();
-    for (var pair of formData) {
-        searchParams.append(pair[0], pair[1]);
-    }
-    
-    // 用 fetch 發送 POST 請求到 Google GAS
-    fetch(form.action, {
-        method: 'POST',
-        body: searchParams,
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        }
-    })
-    .then(response => response.text())
-    .then(data => {
-        loading.style.display = 'none';
-        if (data === 'success') {
-            sentMessage.style.display = 'block'; // 顯示成功畫面
-            form.reset(); // 清空表單
-        } else {
-            errorMessage.textContent = '傳送失敗，請稍後再試。錯誤原因：' + data;
-            errorMessage.style.display = 'block';
-        }
-    })
-    .catch(error => {
-        loading.style.display = 'none';
-        errorMessage.textContent = '連線錯誤：' + error;
-        errorMessage.style.display = 'block';
-    });
-  });
-</script>
 
 </html>
